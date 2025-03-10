@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular de Înregistrare la Maraton</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <img src="logo.jpg" alt="Logo Maraton" class="logo">
+            <p>Vezi <a href="regulament.html" target="_blank">regulamentul</a> pentru detalii.</p>
+        </header>
+        
+        <h1>Formular de Înregistrare la Maraton</h1>
+        
+        <form  method="post" target="_self" onsubmit="return validateForm(event)">
+            <fieldset>
+                <legend><b>Date personale</b></legend>
+                <label for="nume"><strong>Nume:</strong></label>
+                <input type="text" id="nume" name="nume" maxlength="50"><br><br>
+                
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email" size="30"><br><br>
+                
+                <label for="telefon"><b>Telefon:</b></label>
+                <input type="tel" id="telefon" name="telefon" maxlength="10"><br><br>
+
+                <label for="data_nasterii"><b>Data nașterii:</b></label>
+                <input type="date" id="data_nasterii" name="data_nasterii"><br><br>
+
+                <label for="cod_inscriere"><b>Cod de înscriere:</b></label>
+                <input type="text" id="cod_inscriere" name="cod_inscriere" value="AUTOGENERAT" readonly><br><br>
+            </fieldset>
+            <fieldset>
+                <legend><b>Detalii Participare</b></legend>
+                <label for="distanta"><b>Distanța dorită:</b></label>
+                <select id="distanta" name="distanta" multiple>
+                    <option value="5km">5 km</option>
+                    <option value="10km">10 km</option>
+                    <option value="21km">Semimaraton (21 km)</option>
+                    <option value="42km">Maraton (42 km)</option>
+                </select><br><br>
+                
+                <label><b>Tip participare:</b></label><br>
+                <input type="radio" name="participare" value="individual" checked> Individual<br>
+                <input type="radio" name="participare" value="echipa"> Echipa<br><br>
+
+                <label for="nume_echipa"><b>Numele echipei:</b> (Completează doar dacă ai ales "Echipă")</label>
+                <input type="text" id="nume_echipa" name="nume_echipa" maxlength="50"><br><br>
+                
+                <label><b>Beneficii dorite:</b></label><br>
+                <input type="checkbox" name="tricou" checked> Tricou eveniment<br>
+                <input type="checkbox" name="medalie"> Medalie de participare<br>
+                <input type="checkbox" name="fotografii"> Fotografii personalizate<br>
+            </fieldset>
+            
+            <fieldset>
+                <legend><b>Timp estimat de finalizare</b></legend>
+                <label for="ore"><b>Ore:</b></label>
+                <input type="number" id="ore" name="ore" min="0">
+                
+                <label for="minute"><b>Minute:</b></label>
+                <input type="number" id="minute" name="minute" min="0" max="59" step="5">
+                
+                <p><i>(Exemplu: 2 ore și 30 de minute)</i></p>
+            </fieldset>
+            
+            <fieldset>
+                <legend><b>Informații de plată</b></legend>
+                <label for="card"><b>Tip card:</b></label>
+                <select id="card" name="card">
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </select><br><br>
+                
+                <label for="numar_card"><b>Număr card:</b></label>
+                <input type="text" id="numar_card" name="numar_card" size="16" maxlength="16" title="Introduceți numărul cardului"><br><br>
+
+                <label for="plata_status"><b>Status plată:</b></label>
+                <input type="text" id="plata_status" name="plata_status" value="Neprocesată" disabled><br><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend><b>Observații</b></legend>
+                <textarea name="observatii" cols="50" rows="4"></textarea>
+            </fieldset>
+            
+            <br>
+            <input type="submit" value="Înscrie-te">
+            <input type="reset" value="Resetează">
+        </form>
+        
+        <h2>Taxe de Participare</h2>
+        <table>
+            <tr>
+                <th>Distanță</th>
+                <th>Taxă</th>
+                <th>Discount</th>
+            </tr>
+            <tr>
+                <td>5 km</td>
+                <td>50 RON</td>
+                <td rowspan="2">10% pentru studenți</td>
+            </tr>
+            <tr>
+                <td>10 km</td>
+                <td>80 RON</td>
+            </tr>
+            <tr>
+                <td>Semimaraton (21 km)</td>
+                <td>120 RON</td>
+                <td>15% pentru grupuri de peste 5 persoane</td>
+            </tr>
+            <tr>
+                <td>Maraton (42 km)</td>
+                <td>200 RON</td>
+                <td>20% pentru echipe de minim 3 membri</td>
+            </tr>
+        </table>
+
+        <h3 ><b>Beneficii oferite</b></h3>
+        <table >
+            <tr>
+                <th>Beneficii</th>
+                <th>Produse</th>
+            </tr>
+            <tr>
+                <td>
+                    <ol type="A">
+                        <li>Acces la zona VIP</li>
+                        <li>Revista evenimentului</li>
+                        <li>
+                            Pachet promoțional:
+                            <ol type="i">
+                                <li>Voucher reducere echipament sportiv</li>
+                                <li>Suvenir personalizat</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </td>
+                <td>
+                    <table >
+                        <tr><th>Produse</th></tr>
+                        <tr><td >Încălțăminte sportivă</td></tr>
+                        <tr><td >Tricouri tehnice</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <h3 ><b>Alte informații</b></h3>
+        <ol type="1" start="10">
+            <li>Contact organizatori</li>
+            <li>Program eveniment</li>
+            <li>
+                Locație și acces:
+                <ul >
+                    <li>Hartă traseu</li>
+                    <li>Informații despre transport</li>
+                    <li>Parcare disponibilă</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+        
+</body>
+</html>
