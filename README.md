@@ -1,4 +1,4 @@
-# Marathon_Form
+
 # 🏃‍♂️ Marathon Registration Form
 
 A modern, user-friendly marathon registration form with **JavaScript validation**, **dynamic registration code generation**, and a **dark mode toggle**. Built with **HTML, CSS, and JavaScript**, this project ensures an interactive and smooth user experience.
