@@ -11,4 +11,8 @@ A modern, user-friendly marathon registration form with **JavaScript validation*
 
 
 ## 📂 Project Structure
-📁 marathon-form ├── 📜 index.html # Main HTML file containing the registration form ├── 🎨 styles.css # External CSS file for styling the form ├── ⚡ script.js # JavaScript file for form validation & dark mode toggle ├── 🖼️ logo.png # Marathon logo 
+📁 marathon-form
+├── 📜 index.html – Main HTML file containing the registration form
+├── 🎨 styles.css – External CSS file for styling the form
+├── ⚡ script.js – JavaScript file for form validation & dark mode toggle
+├── 🖼️ logo.png – Marathon logo
